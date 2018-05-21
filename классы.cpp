@@ -1,15 +1,10 @@
 
 
 #include "stdafx.h"
-#include <conio.h>
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <vector>
 #include "Sales_data.h"
 #include "Person.h"
 #include "Screen.h"
-#include "Screen.cpp"
+#include "Window_mgr.h"
 
 //0-201-78345-X 3 20.00
 //0-201-78345-X 4 25.00
@@ -18,10 +13,16 @@
 
 int main()
 {
-	Screen myscreen;
-	char ch = myscreen.get();
-	ch = myscreen.get(0, 0);
-	
+	Screen myscreen(5, 5, 'A');
+	myscreen.move(4, 0).set('#').display(std::cout);
+	//myscreen.set('B');
+	//myscreen.move()
+	std::cout << std::endl;
+	myscreen.display(std::cout);
+	std::cout << std::endl;
+	//char ch = myscreen.get();
+	//Screen testscreen;
+	//testscreen.move(4, 0).set('A');
 	
 	// declare variables to hold running sum and data for the next record 
 

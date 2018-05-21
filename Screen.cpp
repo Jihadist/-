@@ -1,9 +1,8 @@
 #include "stdafx.h"
-
 #include "Screen.h"
 
 
-inline 
+
 Screen &Screen::move(pos r, pos c)
 {
 	pos row = r*width;
@@ -11,7 +10,7 @@ Screen &Screen::move(pos r, pos c)
 	return *this;
 }
 
-inline char Screen::get(pos r, pos c) const
+char Screen::get(pos r, pos c) const
 {
 	pos row = r*width;
 	return contents[row + c];
@@ -20,4 +19,16 @@ inline char Screen::get(pos r, pos c) const
 void Screen::some_member() const
 {
 	++access_ctr;
+}
+
+Screen &Screen::set(char c)
+{
+	contents[cursor] = c;
+	return *this;
+}
+
+inline Screen &Screen::set(pos r, pos col, char ch)
+{
+	contents[r*width + col] = ch;
+	return *this;
 }

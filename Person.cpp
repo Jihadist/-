@@ -1,6 +1,4 @@
 #include "stdafx.h"
-#include <iostream>
-#include <sstream>
 #include "Person.h"
 
 std::istream &read(std::istream &is, Person &item)

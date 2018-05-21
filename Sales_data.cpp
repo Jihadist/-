@@ -1,6 +1,4 @@
 #include "stdafx.h"
-#include <iostream>
-#include <sstream>
 #include "Sales_data.h"
 
 
