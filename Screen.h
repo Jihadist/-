@@ -14,15 +14,15 @@ public:
 		return contents[cursor];
 	}
 	char get(pos ht, pos wd) const;
-	Screen &move(pos r, pos c);
-	Screen &set(char);
-	Screen &set(pos, pos, char);
-	Screen &display(std::ostream &os)
+	Screen move(pos r, pos c);
+	Screen set(char);
+	Screen set(pos, pos, char);
+	Screen display(std::ostream &os)
 	{
 		do_display(os);
 		return *this;
 	}
-	const Screen &display(std::ostream &os) const
+	const Screen display(std::ostream &os) const
 	{
 		do_display(os);
 		return *this;

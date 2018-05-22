@@ -14,15 +14,12 @@
 int main()
 {
 	Screen myscreen(5, 5, 'A');
-	myscreen.move(4, 0).set('#').display(std::cout);
-	//myscreen.set('B');
-	//myscreen.move()
+	myscreen.move(4, 0);
+	myscreen.set('#');
+	myscreen.display(std::cout);
 	std::cout << std::endl;
 	myscreen.display(std::cout);
 	std::cout << std::endl;
-	//char ch = myscreen.get();
-	//Screen testscreen;
-	//testscreen.move(4, 0).set('A');
 	
 	// declare variables to hold running sum and data for the next record 
 
